@@ -1,6 +1,8 @@
 const { Schema, model } = require("mongoose");
 
-// Schema to create User model
+// {
+// "username": "Darren",
+// "email": "darren@kandekore.net"}
 const userSchema = new Schema(
   {
     username: {

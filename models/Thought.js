@@ -1,7 +1,10 @@
 const { Schema, model } = require("mongoose");
-// const Reaction = require("./Reaction");
+const Reaction = require("./Reaction");
 
-// Schema to create Post model
+// {
+//   "userId": "638106407ce6e40b04e70ee2",
+//   "thoughtText": "More thought",
+//   "username": "Tom" }
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -18,12 +21,12 @@ const thoughtSchema = new Schema(
       type: String,
       required: true,
     },
-    reactions: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "reaction",
-      },
-    ],
+    reactions: [Reaction],
+    // {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "reaction",
+    // },
+    // ],
   },
   {
     toJSON: {
